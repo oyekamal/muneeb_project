@@ -8,6 +8,8 @@ router.register(r'vehicle', VehicleViewSet)
 
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)), 
+    path('mileage_details', VehicleViewSet.as_view({'get': 'mileage_details'})),
+
 ]
 
